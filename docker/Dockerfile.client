@@ -1,5 +1,8 @@
 FROM node:18.16.1-alpine
 
+RUN apk add --no-cache tzdata
+ENV TZ=Europe/Moscow
+
 WORKDIR /var/www/html
 
 RUN npm rebuild esbuild
